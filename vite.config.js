@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: './', // Add this line
+  base:'/News-react-vite/', // Add this line
   test: {
     globals: true,
     environment: 'jsdom',
