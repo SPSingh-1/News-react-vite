@@ -38,9 +38,13 @@ export default function NewsItem (props){
             <h5 className="card-title text-black">{title.length > 30 ? title.slice(0, 30) + '...' : title}</h5>
             <p className="card-text text-black">{description ? (description.length > 60 ? description.slice(0, 60) + '...' : description) : ''}</p>
             <p className="card-text">
-              <small className="text-muted">
-                By {author?author:"Unknown"} on {new Date(publishedAt).toUTCString()}{" "}
-              </small>
+            <small className="text-muted">
+                By {author
+                  ? author.length > 20
+                    ? author.slice(0, 20) + "..."
+                    : author
+                  : "Unknown"} on {new Date(publishedAt).toUTCString()}
+            </small>
             </p>
             <a
               href={newsUrl}

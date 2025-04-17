@@ -15,6 +15,8 @@ export default function App() {
   const pageSize = 18;
 
   const apiKey = import.meta.env.VITE_NEWS_API_KEY;
+  console.log("ENV KEY:", import.meta.env.VITE_NEWS_API_KEY);
+
 
 
   return (
